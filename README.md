@@ -1,6 +1,6 @@
 [![Circle CI](https://circleci.com/gh/sameersbn/docker-redis.svg?style=shield)](https://circleci.com/gh/sameersbn/docker-redis) [![Docker Repository on Quay.io](https://quay.io/repository/sameersbn/redis/status "Docker Repository on Quay.io")](https://quay.io/repository/sameersbn/redis)
 
-# sameersbn/redis
+# jdd/redis (modify from sameersbn)
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
@@ -15,6 +15,19 @@
 - [Maintenance](#maintenance)
   - [Upgrading](#upgrading)
   - [Shell Access](#shell-access)
+
+
+# Modify
+- add the update docker scripts
+- change the snapshotting freqency in Dockerfile based on [redis persistence method] (https://redis.io/topics/persistence) 
+  ```bash
+   ...
+   ...
+   && sed 's/^save 900 1/save 300 1/' -i /etc/redis/redis.conf \
+   && sed 's/^save 300 10/save 120 10/' -i /etc/redis/redis.conf \
+   ...
+   ... 
+  ```
 
 # Introduction
 
