@@ -19,7 +19,7 @@
 
 # Modify
 - add the update docker scripts
-- change the snapshotting freqency in Dockerfile based on [redis persistence method] (https://redis.io/topics/persistence) 
+- change the snapshotting freqency in Dockerfile based on [redis persistence method](https://redis.io/topics/persistence) 
   ```bash
    ...
    ...
